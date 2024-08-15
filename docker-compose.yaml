@@ -1,13 +1,13 @@
 version: '3.8'
 
 services:
-  backend-service:
+  backend-svc:
     image: backend
     build:
       context: ./backend
       dockerfile: ./Dockerfile
 
-  frontend-service:
+  frontend-svc:
     image: frontend
     build:
       context: ./frontend
@@ -16,7 +16,7 @@ services:
       - 8080:8080
     environment:
       - BACKEND_PORT=9000
-      - BACKEND_DNS=backend-service
+      - BACKEND_DNS=backend-svc
     depends_on:
-      - backend-service
+      - backend-svc
 
