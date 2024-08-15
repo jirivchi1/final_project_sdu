@@ -15,8 +15,8 @@ services:
     ports:
       - 8080:8080
     environment:
-      - BACKEND_PORT = 8081
-      - BACKEND_DNS = backend-service
+      - BACKEND_PORT=9000
+      - BACKEND_DNS=backend-service
     depends_on:
       - backend-service
 
