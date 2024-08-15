@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-deployment
+  name: frontend
   labels:
     app: frontend
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: frontend
@@ -15,7 +15,12 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: frontend
-        image: nipel24/frontend:latest  # Cambia esto a tu imagen Docker del frontend
-        ports:
-        - containerPort: 80
+        - image: nipel24/frontend:latest
+          name: frontend
+          ports:
+            - containerPort: 8080
+          env:
+            - name: BACKEND_DNS
+              value: backend
+            - name: BACKEND_PORT
+              value: "9000"

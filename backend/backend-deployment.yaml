@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-deployment
+  name: backend
   labels:
     app: backend
 spec:
@@ -15,7 +15,7 @@ spec:
         app: backend
     spec:
       containers:
-      - name: backend
-        image: nipel24/backend:latest  # Cambia esto a tu imagen Docker del backend
-        ports:
-        - containerPort: 8080
+        - image: nipel24/backend:latest
+          name: backend
+          ports:
+            - containerPort: 9000
