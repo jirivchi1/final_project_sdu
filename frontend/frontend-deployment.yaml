@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: frontend:latest  # Cambia esto a tu imagen Docker del frontend
+        image: nipel24/frontend:latest  # Cambia esto a tu imagen Docker del frontend
         ports:
         - containerPort: 80
