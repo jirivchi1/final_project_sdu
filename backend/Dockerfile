@@ -9,6 +9,6 @@ COPY . .
 
 RUN go build -o /backend
 
-EXPOSE 8081
+EXPOSE 9000
 
 ENTRYPOINT ["/backend"]
