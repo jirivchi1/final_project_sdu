@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: backend
-        image: jirivchi1/backend:latest  # Cambia esto a tu imagen Docker del backend
+        image: nipel24/backend:latest  # Cambia esto a tu imagen Docker del backend
         ports:
         - containerPort: 8080
